@@ -45,16 +45,24 @@ int main() {
 					direction_x *= -1;
 					break;
 				case KEY_RIGHT:
-					x += 1;
+					if (x + 1 < w_width / 2) {
+						x += 1;
+					}
 					break;
 				case KEY_LEFT:
-					x -= 1;
+					if (x - 1 > 0) {
+						x -= 1;
+					}
 					break;
 				case KEY_DOWN:
-					y += 1;
+					if (y + 1 < w_height / 2) {
+						y += 1;
+					}
 					break;
 				case KEY_UP:
-					y -= 1;
+					if (y - 1 > 0) {
+						y -= 1;
+					}
 					break;
 			}
 		}
